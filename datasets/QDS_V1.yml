@@ -1,0 +1,67 @@
+unique_name: QDS_V1
+object_type: dataset
+label: QDS_V1
+columns:
+  - name: VULNERABILITY_INSTANCE_OID
+    data_type: decimal(19,0)
+  - name: CVE
+    data_type: string
+  - name: IS_PROTECTED_BY_VSP
+    data_type: boolean
+  - name: IS_PROTECTED_BY_VSP_WEB
+    data_type: boolean
+  - name: IS_PROTECTED_BY_VSP_MEM
+    data_type: boolean
+  - name: IS_PROTECTED_BY_VSP_HOST
+    data_type: boolean
+  - name: IS_PROTECTED_BY_VSP_VRULE
+    data_type: boolean
+  - name: IS_EXPLOIT_AVAILABLE
+    data_type: boolean
+  - name: WORKLOAD_IP
+    data_type: string
+  - name: WORKLOAD_NAME
+    data_type: string
+  - name: TENANT_ID
+    data_type: string
+  - name: UPDATED_AT
+    data_type: decimal(38,0)
+  - name: WORKLOAD_OID
+    data_type: string
+  - name: WORKLOAD_ID
+    data_type: string
+  - name: TENANT_ID
+    data_type: string
+  - name: WORKLOAD_OID
+    data_type: string
+  - name: WORKLOAD_ID
+    data_type: string
+  - name: WORKLOAD_NAME
+    data_type: string
+  - name: OPERATING_SYSTEM_PLATFORM
+    data_type: string
+  - name: OPERATING_SYSTEM
+    data_type: string
+  - name: OPERATING_SYSTEM_VERSION
+    data_type: string
+  - name: IP_ADDRESS
+    data_type: string
+  - name: VSP_VERSION
+    data_type: string
+  - name: IS_DELETED
+    data_type: boolean
+  - name: UPDATED_AT
+    data_type: decimal(38,0)
+  - name: APPLICATION_OID
+    data_type: string
+  - name: LICENSE_OID
+    data_type: string
+connection_id: con_VIRSEC_ATSCALE_DATA_DBT_IWASSERMAN
+sql: |-
+  select
+    *
+  from VIRSEC_ATSCALE_DATA.DBT_IWASSERMAN.dim_vulnerability_instances_static v
+  asof join VIRSEC_ATSCALE_DATA.DBT_IWASSERMAN.dim_workloads_stream_static w
+    match_condition(v.updated_at >= w.updated_at)
+    on(v.workload_id = w.workload_id)
+  order by v.workload_id, v.updated_at

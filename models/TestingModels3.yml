@@ -1,0 +1,15 @@
+unique_name: TestingModels3
+object_type: model
+label: TestingModels3
+dimensions: []
+metrics:
+  - unique_name: DC OpSys
+relationships:
+  - unique_name: QDS_V2_CVE_to_CVE_CVE
+    from:
+      dataset: QDS_V2
+      join_columns:
+        - CVE
+    to:
+      dimension: CVE
+      level: CVE

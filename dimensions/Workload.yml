@@ -1,0 +1,27 @@
+unique_name: Workload
+object_type: dimension
+label: Workload
+hierarchies:
+  - unique_name: Workload Hierarchy
+    label: Workload Hierarchy
+    levels:
+      - unique_name: Workload Level
+      - unique_name: CVE
+level_attributes:
+  - unique_name: Workload Level
+    label: Workload Level
+    contains_unique_names: false
+    dataset: QDS_V2
+    is_unique_key: false
+    key_columns:
+      - WORKLOAD_OID
+    name_column: WORKLOAD_NAME
+  - unique_name: CVE
+    label: CVE
+    contains_unique_names: false
+    dataset: QDS_V2
+    is_unique_key: false
+    key_columns:
+      - CVE
+    name_column: CVE
+type: standard

@@ -1,0 +1,18 @@
+unique_name: UPDATE
+object_type: dimension
+label: UPDATE
+hierarchies:
+  - unique_name: UPDATE
+    label: UPDATE
+    levels:
+      - unique_name: UPDATE
+is_degenerate: true
+level_attributes:
+  - unique_name: UPDATE
+    label: UPDATE
+    contains_unique_names: false
+    dataset: QDS_V2
+    key_columns:
+      - UPDATED_AT
+    name_column: UPDATED_AT
+type: standard

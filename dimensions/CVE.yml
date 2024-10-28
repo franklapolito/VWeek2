@@ -1,0 +1,18 @@
+unique_name: CVE
+object_type: dimension
+label: CVE
+hierarchies:
+  - unique_name: CVE by Workload
+    label: CVE by Workload
+    levels:
+      - unique_name: CVE
+level_attributes:
+  - unique_name: CVE
+    label: CVE
+    contains_unique_names: false
+    dataset: DIM_VULNERABILITIES_STATIC
+    is_unique_key: false
+    key_columns:
+      - CVE
+    name_column: CVE
+type: standard

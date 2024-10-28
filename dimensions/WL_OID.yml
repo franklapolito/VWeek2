@@ -1,0 +1,27 @@
+unique_name: WL_OID
+object_type: dimension
+label: WL_OID
+hierarchies:
+  - unique_name: WL_OID
+    label: WL_OID
+    levels:
+      - unique_name: WL_OID
+      - unique_name: CVE
+is_degenerate: true
+level_attributes:
+  - unique_name: WL_OID
+    label: WL_OID
+    contains_unique_names: false
+    dataset: QDS_V2
+    key_columns:
+      - WORKLOAD_OID
+    name_column: WORKLOAD_OID
+  - unique_name: CVE
+    label: CVE
+    contains_unique_names: false
+    dataset: QDS_V2
+    is_unique_key: false
+    key_columns:
+      - CVE
+    name_column: CVE
+type: standard

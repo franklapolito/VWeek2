@@ -1,0 +1,18 @@
+unique_name: Vuln_OID
+object_type: dimension
+label: Vuln_OID
+hierarchies:
+  - unique_name: Vuln_OID
+    label: Vuln_OID
+    levels:
+      - unique_name: Vuln_OID
+is_degenerate: true
+level_attributes:
+  - unique_name: Vuln_OID
+    label: Vuln_OID
+    contains_unique_names: false
+    dataset: QDS_V2
+    key_columns:
+      - VULNERABILITY_INSTANCE_OID
+    name_column: VULNERABILITY_INSTANCE_OID
+type: standard

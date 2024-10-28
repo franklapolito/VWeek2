@@ -1,0 +1,6 @@
+unique_name: AVG Severity Score2
+object_type: metric
+label: AVG Severity Score
+calculation_method: average
+column: SEVERITY_SCORE
+dataset: DIM_VULNERABILITIES_STATIC

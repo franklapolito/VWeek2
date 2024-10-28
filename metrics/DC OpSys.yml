@@ -1,0 +1,6 @@
+unique_name: DC OpSys
+object_type: metric
+label: DC OpSys
+calculation_method: count distinct
+column: OPERATING_SYSTEM
+dataset: QDS_V2

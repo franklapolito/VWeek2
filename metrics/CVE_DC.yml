@@ -1,0 +1,6 @@
+unique_name: CVE_DC
+object_type: metric
+label: CVE_DC
+calculation_method: count distinct
+column: CVE
+dataset: QDS_V2

@@ -1,0 +1,6 @@
+version: 1
+unique_name: Virsec Week 2
+object_type: catalog
+label: Virsec Week 2
+aggressive_agg_promotion: false
+build_speculative_aggs: true
