@@ -1,0 +1,40 @@
+unique_name: DIM_SOFTWARE_STATIC
+object_type: dataset
+label: DIM_SOFTWARE_STATIC
+columns:
+  - name: SOFTWARE_OID
+    data_type: string
+  - name: NAME
+    data_type: string
+  - name: SOFTWARE_TYPE
+    data_type: string
+  - name: CHECKSUM
+    data_type: string
+  - name: PATH
+    data_type: string
+  - name: WORKLOAD_ID
+    data_type: string
+  - name: WORKLOAD_NAME
+    data_type: string
+  - name: IP_ADDRESS
+    data_type: string
+  - name: OPERATING_SYSTEM
+    data_type: string
+  - name: VERIFICATION_SOURCE
+    data_type: string
+  - name: TRUST_SCORE
+    data_type: decimal(38,0)
+  - name: TRUST_CATEGORY
+    data_type: string
+  - name: TENANT_ID
+    data_type: string
+  - name: SOFTWARE_CREATED_AT
+    data_type: decimal(38,0)
+  - name: INTELLIGENCE_CREATED_AT
+    data_type: decimal(38,0)
+  - name: CREATED_AT
+    data_type: decimal(38,0)
+  - name: UPDATED_AT
+    data_type: decimal(38,0)
+connection_id: con_VIRSEC_ATSCALE_DATA_DBT_IWASSERMAN
+table: DIM_SOFTWARE_STATIC

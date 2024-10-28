@@ -1,6 +1,6 @@
-unique_name: CVE
+unique_name: CVE_BW
 object_type: dimension
-label: CVE
+label: CVE_BW
 hierarchies:
   - unique_name: CVE by Workload
     label: CVE by Workload

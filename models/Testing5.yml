@@ -1,0 +1,39 @@
+unique_name: Testing5
+object_type: model
+label: Testing5
+dimensions: []
+metrics:
+  - unique_name: CVE DISTINCTCOUNT
+relationships:
+  - unique_name: FRANK_TABLE_CVE_to_Vulns2_CVE Level
+    from:
+      dataset: FRANK_TABLE
+      join_columns:
+        - CVE
+    to:
+      dimension: Vulns2
+      level: CVE Level
+  - unique_name: FRANK_TABLE_WORKLOAD_OID_to_Dim Software_Workload Name
+    from:
+      dataset: FRANK_TABLE
+      join_columns:
+        - WORKLOAD_OID
+    to:
+      dimension: Dim Software
+      level: Workload Name
+  - unique_name: FRANK_TABLE_CVE_to_Workload_CVE
+    from:
+      dataset: FRANK_TABLE
+      join_columns:
+        - CVE
+    to:
+      dimension: Workload
+      level: CVE
+  - unique_name: FRANK_TABLE_OPERATING_SYSTEM_to_Workload_Workload-Software Level
+    from:
+      dataset: FRANK_TABLE
+      join_columns:
+        - OPERATING_SYSTEM
+    to:
+      dimension: Workload
+      level: Workload-Software Level

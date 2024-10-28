@@ -1,0 +1,6 @@
+unique_name: CVE DISTINCTCOUNT
+object_type: metric
+label: CVE DISTINCTCOUNT
+calculation_method: count distinct
+column: CVE
+dataset: FRANK_TABLE

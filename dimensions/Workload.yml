@@ -7,6 +7,11 @@ hierarchies:
     levels:
       - unique_name: Workload Level
       - unique_name: CVE
+  - unique_name: Workload-Software
+    label: Workload-Software
+    levels:
+      - unique_name: Workload-Software
+      - unique_name: Workload-Software Level
 level_attributes:
   - unique_name: Workload Level
     label: Workload Level
@@ -24,4 +29,20 @@ level_attributes:
     key_columns:
       - CVE
     name_column: CVE
+  - unique_name: Workload-Software
+    label: Workload-Software
+    contains_unique_names: false
+    dataset: QDS_V2
+    is_unique_key: false
+    key_columns:
+      - WORKLOAD_OID
+    name_column: WORKLOAD_OID
+  - unique_name: Workload-Software Level
+    label: Workload-Software Level
+    contains_unique_names: false
+    dataset: QDS_V2
+    is_unique_key: false
+    key_columns:
+      - OPERATING_SYSTEM
+    name_column: OPERATING_SYSTEM
 type: standard

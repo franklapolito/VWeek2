@@ -1,0 +1,27 @@
+unique_name: Vulns2
+object_type: dimension
+label: Vulns2
+hierarchies:
+  - unique_name: Vulns2 Hierarchy
+    label: Vulns2 Hierarchy
+    levels:
+      - unique_name: Sev Cat
+      - unique_name: CVE Level
+level_attributes:
+  - unique_name: Sev Cat
+    label: Sev Cat
+    contains_unique_names: false
+    dataset: DIM_VULNERABILITIES_STATIC
+    is_unique_key: false
+    key_columns:
+      - SEVERITY_CATEGORY
+    name_column: SEVERITY_CATEGORY
+  - unique_name: CVE Level
+    label: CVE Level
+    contains_unique_names: false
+    dataset: DIM_VULNERABILITIES_STATIC
+    is_unique_key: false
+    key_columns:
+      - CVE
+    name_column: CVE
+type: standard

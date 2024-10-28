@@ -1,0 +1,48 @@
+unique_name: FRANK_TABLE
+object_type: dataset
+label: FRANK_TABLE
+columns:
+  - name: CVE
+    data_type: string
+  - name: IS_EXPLOIT_AVAILABLE
+    data_type: boolean
+  - name: IS_PROTECTED_BY_VSP
+    data_type: boolean
+  - name: IS_PROTECTED_BY_VSP_HOST
+    data_type: boolean
+  - name: IS_PROTECTED_BY_VSP_MEM
+    data_type: boolean
+  - name: IS_PROTECTED_BY_VSP_VRULE
+    data_type: boolean
+  - name: IS_PROTECTED_BY_VSP_WEB
+    data_type: boolean
+  - name: TENANT_ID
+    data_type: string
+  - name: UPDATED_AT
+    data_type: decimal(38,0)
+  - name: VULNERABILITY_INSTANCE_OID
+    data_type: decimal(19,0)
+  - name: WORKLOAD_ID
+    data_type: string
+  - name: WORKLOAD_IP
+    data_type: string
+  - name: WORKLOAD_NAME
+    data_type: string
+  - name: WORKLOAD_OID
+    data_type: string
+  - name: APPLICATION_OID
+    data_type: string
+  - name: IS_DELETED
+    data_type: boolean
+  - name: LICENSE_OID
+    data_type: string
+  - name: OPERATING_SYSTEM
+    data_type: string
+  - name: OPERATING_SYSTEM_PLATFORM
+    data_type: string
+  - name: OPERATING_SYSTEM_VERSION
+    data_type: string
+  - name: VSP_VERSION
+    data_type: string
+connection_id: con_SE_DEMO_LIBRARY_AGGREGATES_FL
+table: FRANK_TABLE

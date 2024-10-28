@@ -1,0 +1,18 @@
+unique_name: Cve
+object_type: dimension
+label: Cve
+hierarchies:
+  - unique_name: Cve_Hierarchy
+    label: Cve Hierarchy
+    levels:
+      - unique_name: Cve_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Cve_Level
+    label: Cve Level
+    contains_unique_names: false
+    dataset: DIM_VULNERABILITIES_STATIC
+    key_columns:
+      - CVE
+    name_column: CVE
+type: standard

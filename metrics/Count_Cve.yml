@@ -1,0 +1,6 @@
+unique_name: Count_Cve
+object_type: metric
+label: Count_Cve
+calculation_method: count distinct
+column: CVE
+dataset: DIM_VULNERABILITIES_STATIC

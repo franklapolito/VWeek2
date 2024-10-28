@@ -1,0 +1,6 @@
+unique_name: Count Vulnerabilities
+object_type: metric
+label: Count Vulnerabilities
+calculation_method: count distinct
+column: CVE
+dataset: QDS_V2

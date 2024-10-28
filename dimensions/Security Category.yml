@@ -1,0 +1,27 @@
+unique_name: Security Category
+object_type: dimension
+label: Security Category
+hierarchies:
+  - unique_name: Security Category
+    label: Security Category
+    levels:
+      - unique_name: Security Category Level
+      - unique_name: Security Category Level (1)
+level_attributes:
+  - unique_name: Security Category Level
+    label: Security Category Level
+    contains_unique_names: false
+    dataset: DIM_VULNERABILITIES_STATIC
+    is_unique_key: false
+    key_columns:
+      - SEVERITY_CATEGORY
+    name_column: SEVERITY_CATEGORY
+  - unique_name: Security Category Level (1)
+    label: Security Category Level (1)
+    contains_unique_names: false
+    dataset: DIM_VULNERABILITIES_STATIC
+    is_unique_key: false
+    key_columns:
+      - SEVERITY_SCORE
+    name_column: SEVERITY_SCORE
+type: standard

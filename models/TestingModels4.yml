@@ -1,0 +1,17 @@
+unique_name: TestingModels4
+object_type: model
+label: TestingModels4
+dimensions: []
+metrics:
+  - unique_name: Count_Cve
+relationships:
+  - unique_name: >-
+      DIM_VULNERABILITIES_STATIC_SEVERITY_CATEGORY_to_Security Category_Security
+      Category Level (1)
+    from:
+      dataset: DIM_VULNERABILITIES_STATIC
+      join_columns:
+        - SEVERITY_CATEGORY
+    to:
+      dimension: Security Category
+      level: Security Category Level (1)

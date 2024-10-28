@@ -4,12 +4,29 @@ label: TestingModels3
 dimensions: []
 metrics:
   - unique_name: DC OpSys
+  - unique_name: Count Vulnerabilities
 relationships:
-  - unique_name: QDS_V2_CVE_to_CVE_CVE
+  - unique_name: QDS_V2_CVE_to_Workload_CVE
     from:
       dataset: QDS_V2
       join_columns:
         - CVE
     to:
-      dimension: CVE
+      dimension: Workload
       level: CVE
+  - unique_name: QDS_V2_OPERATING_SYSTEM_to_Workload_Workload-Software Level
+    from:
+      dataset: QDS_V2
+      join_columns:
+        - OPERATING_SYSTEM
+    to:
+      dimension: Workload
+      level: Workload-Software Level
+  - unique_name: QDS_V2_CVE_to_Vulns2_CVE Level
+    from:
+      dataset: QDS_V2
+      join_columns:
+        - CVE
+    to:
+      dimension: Vulns2
+      level: CVE Level

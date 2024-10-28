@@ -1,0 +1,27 @@
+unique_name: Dim Software
+object_type: dimension
+label: Dim Software
+hierarchies:
+  - unique_name: Software H
+    label: Software H
+    levels:
+      - unique_name: Workload Name
+      - unique_name: Software H Level
+level_attributes:
+  - unique_name: Workload Name
+    label: Workload Name
+    contains_unique_names: false
+    dataset: DIM_SOFTWARE_STATIC
+    is_unique_key: false
+    key_columns:
+      - WORKLOAD_ID
+    name_column: WORKLOAD_NAME
+  - unique_name: Software H Level
+    label: Software H Level
+    contains_unique_names: false
+    dataset: DIM_SOFTWARE_STATIC
+    is_unique_key: false
+    key_columns:
+      - SOFTWARE_OID
+    name_column: NAME
+type: standard
